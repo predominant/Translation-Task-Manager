@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TranslationTask.Properties
+namespace TranslationTaskApp.Properties
 {
 
 
