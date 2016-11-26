@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TranslationTaskApp"
         mc:Ignorable="d"
         Title="AddTaskWindow" Height="160" Width="420">
-    <Grid Margin="10" Name="TaskDialog">
+    <Grid Margin="10" Name="AddTaskWindow_Grid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="Auto"/>
@@ -25,9 +25,10 @@
         <TextBlock Text="Target Language" Grid.Column="0" Grid.Row="2" />
         <TextBox Name="TargetLanguage" Width="250" Grid.Column="1" Grid.Row="2" Text="{Binding TargetLanguage}"/>
         <TextBlock Text="Word Count" Grid.Column="0" Grid.Row="3" />
-        <TextBox Name="WordCount" Width="250" Grid.Column="1" Grid.Row="3" PreviewTextInput="NumberValidationTextBox" />
-        
-        <Button Name="AddButton" Content="Add" Grid.Column="1" Grid.Row="4" Width="100" HorizontalAlignment="Right" Click="AddButton_Click"/>
-        <Button Name="CancelButton" Content="Cancel" Grid.Column="1" Grid.Row="4" Width="100" HorizontalAlignment="Left" Click="CancelButton_Click"/>
+        <!-- <TextBox Name="WordCount" Width="250" Grid.Column="1" Grid.Row="3" PreviewTextInput="NumberValidationTextBox" /> -->
+        <TextBox Name="WordCount" Width="250" Grid.Column="1" Grid.Row="3" Text="{Binding WordCount}"/>
+
+        <Button Name="AddButton" Content="Add" Grid.Column="1" Grid.Row="4" Width="100" HorizontalAlignment="Right" Click="AddTaskWindow_AddButton_Click"/>
+        <Button Name="CancelButton" Content="Cancel" Grid.Column="1" Grid.Row="4" Width="100" HorizontalAlignment="Left" Click="AddTaskWindow_CancelButton_Click"/>
     </Grid>
 </Window>

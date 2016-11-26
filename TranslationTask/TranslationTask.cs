@@ -13,7 +13,7 @@ namespace TranslationTaskApp
         public string SourceLanguage { get; set; }
         public string TargetLanguage { get; set; }
 
-        public int WordCount { get; set; }
+        public string WordCount { get; set; }
 
         private TimeSpan _elapsed = new TimeSpan(7, 4, 34);
         public string ElapsedTime

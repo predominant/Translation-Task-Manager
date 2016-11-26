@@ -20,28 +20,27 @@ namespace TranslationTaskApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<TranslationTask> _tasks;
+        private List<TranslationTask> _taskList;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            this._tasks = new List<TranslationTask>();
-            this._tasks.Add(new TranslationTask()
+            this._taskList = new List<TranslationTask>();
+            this._taskList.Add(new TranslationTask()
             {
                 Title = "Task 1",
                 ElapsedTime = "1:02:03"
             });
-            this._tasks.Add(new TranslationTask()
+            this._taskList.Add(new TranslationTask()
             {
                 Title = "ArsonVille",
                 ElapsedTime = "0:01:20"
             });
-
-            icTaskList.ItemsSource = this._tasks;
+            icTaskList.ItemsSource = this._taskList;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void MainWindow_AddTask_Button_Click(object sender, RoutedEventArgs e)
         {
             AddTaskWindow t = new AddTaskWindow(this);
             this.Topmost = false;
@@ -50,7 +49,7 @@ namespace TranslationTaskApp
 
         public void AddTaskToList(TranslationTask t)
         {
-            this._tasks.Add(t);
+            this._taskList.Add(t);
             // TODO: This isn't working properly, because dialog.
             //this.Topmost = true;
            
