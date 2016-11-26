@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,13 +21,13 @@ namespace TranslationTaskApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private List<TranslationTask> _taskList;
+        private ObservableCollection<TranslationTask> _taskList;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            this._taskList = new List<TranslationTask>();
+            this._taskList = new ObservableCollection<TranslationTask>();
             this._taskList.Add(new TranslationTask()
             {
                 Title = "Task 1",
@@ -37,7 +38,8 @@ namespace TranslationTaskApp
                 Title = "ArsonVille",
                 ElapsedTime = "0:01:20"
             });
-            icTaskList.ItemsSource = this._taskList;
+            //icTaskList.ItemsSource = this._taskList;
+            icTaskList.DataContext = this._taskList;
         }
 
         private void MainWindow_AddTask_Button_Click(object sender, RoutedEventArgs e)
@@ -52,7 +54,7 @@ namespace TranslationTaskApp
             this._taskList.Add(t);
             // TODO: This isn't working properly, because dialog.
             //this.Topmost = true;
-           
+
         }
     }
 }

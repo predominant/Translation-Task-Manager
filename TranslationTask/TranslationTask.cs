@@ -15,7 +15,7 @@ namespace TranslationTaskApp
 
         public string WordCount { get; set; }
 
-        private TimeSpan _elapsed = new TimeSpan(7, 4, 34);
+        private TimeSpan _elapsed = new TimeSpan(0);
         public string ElapsedTime
         {
             get { return this._elapsed.ToString("g"); }
