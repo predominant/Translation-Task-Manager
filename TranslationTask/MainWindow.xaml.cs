@@ -53,6 +53,7 @@ namespace TranslationTaskApp
             this._tasks.Add(t);
             // TODO: This isn't working properly, because dialog.
             //this.Topmost = true;
+           
         }
     }
 }

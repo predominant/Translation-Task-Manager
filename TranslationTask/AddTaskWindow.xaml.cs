@@ -35,6 +35,7 @@ namespace TranslationTaskApp
             }
 
             this._mainWindow.AddTaskToList(this._task);
+            this.Close();
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
